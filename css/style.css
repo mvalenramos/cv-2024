@@ -1,0 +1,103 @@
+:root {
+  --bg-color: #0b0b0f;
+  --text-color: #ffffffcc;
+  --accent-color: #a78bfa;
+  --font-main: 'Inter', 'DM Sans', 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.button {
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: radial-gradient(ellipse at center, #1f1f25 0%, #0b0b0f 100%);
+  animation: fadeUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
